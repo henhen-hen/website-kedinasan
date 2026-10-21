@@ -1,0 +1,547 @@
+[
+  {
+    "id": "pkn-stan",
+    "nama": "Politeknik Keuangan Negara STAN",
+    "singkatan": "PKN STAN",
+    "kementerian": "Kementerian Keuangan",
+    "bidang": "keuangan",
+    "bidang_label": "Keuangan Negara",
+    "lokasi": "Tangerang Selatan, Banten",
+    "website": "https://www.pknstan.ac.id",
+    "portal_pendaftaran": "https://spmb.pknstan.ac.id",
+    "deskripsi_singkat": "Perguruan tinggi kedinasan di bawah Kementerian Keuangan, mendidik calon ASN di bidang keuangan negara, pajak, dan kepabeanan.",
+    "deskripsi_lengkap": "Politeknik Keuangan Negara STAN (PKN STAN) adalah perguruan tinggi kedinasan yang berada di bawah dan bertanggung jawab kepada Menteri Keuangan RI. Didirikan sejak 1952, PKN STAN mendidik mahasiswa untuk menjadi aparatur sipil negara (ASN) yang kompeten di bidang keuangan negara. Setelah lulus, mahasiswa ditempatkan di berbagai unit eselon I Kementerian Keuangan maupun instansi lain yang membutuhkan seperti BPKP dan Kemendagri.",
+    "prodi": [
+      { "jenjang": "D-III", "nama": "Akuntansi" },
+      { "jenjang": "D-III", "nama": "Pajak" },
+      { "jenjang": "D-III", "nama": "Kepabeanan dan Cukai" },
+      { "jenjang": "D-III", "nama": "Penilai/PBB" },
+      { "jenjang": "D-III", "nama": "Manajemen Keuangan Daerah" },
+      { "jenjang": "D-IV", "nama": "Akuntansi" },
+      { "jenjang": "D-IV", "nama": "Manajemen Keuangan Publik" }
+    ],
+    "penempatan_instansi": [
+      "Direktorat Jenderal Pajak (DJP)",
+      "Direktorat Jenderal Bea dan Cukai (DJBC)",
+      "Direktorat Jenderal Perbendaharaan (DJPb)",
+      "Direktorat Jenderal Anggaran (DJA)",
+      "BPKP dan instansi lainnya"
+    ],
+    "contoh_jabatan": [
+      "Fungsional Pemeriksa Pajak",
+      "Pemeriksa Bea dan Cukai",
+      "Bendahara Umum Negara",
+      "Analis Keuangan Daerah"
+    ],
+    "ikatan_dinas": true,
+    "biaya_pendidikan": "Gratis (ditanggung negara)",
+    "keterangan_ikatan_dinas": "Mahasiswa terikat untuk bekerja di lingkungan Kemenkeu atau instansi yang ditentukan setelah lulus.",
+    "persyaratan_khusus": "Tidak buta warna; sehat jasmani dan rohani; nilai ijazah sesuai ketentuan. Cek situs resmi untuk ketentuan lengkap.",
+    "catatan": "Persyaratan usia, kuota, dan jadwal pendaftaran berubah tiap tahun. Selalu cek pengumuman resmi.",
+    "tags": ["akuntansi", "pajak", "bea cukai", "keuangan negara", "kemenkeu"]
+  },
+  {
+    "id": "ipdn",
+    "nama": "Institut Pemerintahan Dalam Negeri",
+    "singkatan": "IPDN",
+    "kementerian": "Kementerian Dalam Negeri",
+    "bidang": "pemerintahan",
+    "bidang_label": "Pemerintahan",
+    "lokasi": "Jatinangor, Sumedang, Jawa Barat (Kampus Pusat) + Kampus Daerah",
+    "website": "https://ipdn.ac.id",
+    "portal_pendaftaran": "https://ipdn.ac.id",
+    "deskripsi_singkat": "Sekolah kedinasan Kemendagri yang mendidik calon pamong praja untuk menjadi pemimpin pemerintahan daerah di seluruh Indonesia.",
+    "deskripsi_lengkap": "Institut Pemerintahan Dalam Negeri (IPDN) adalah perguruan tinggi kedinasan di bawah Kementerian Dalam Negeri yang bertugas mendidik kader pemerintahan. Mahasiswa IPDN disebut 'Praja' dan menjalani sistem pendidikan semi-militer dengan tinggal di asrama selama masa studi. Lulusan diproyeksikan menjadi pamong praja dan pejabat pemerintahan daerah di seluruh Indonesia.",
+    "prodi": [
+      { "jenjang": "D-IV/S-1", "nama": "Ilmu Pemerintahan" },
+      { "jenjang": "D-IV/S-1", "nama": "Administrasi Pemerintahan Daerah" },
+      { "jenjang": "D-IV/S-1", "nama": "Manajemen SDM Sektor Publik" },
+      { "jenjang": "D-IV/S-1", "nama": "Studi Kebijakan Publik" }
+    ],
+    "penempatan_instansi": [
+      "Pemerintah Daerah (Provinsi/Kabupaten/Kota) seluruh Indonesia",
+      "Kementerian Dalam Negeri",
+      "Badan dan Dinas tingkat daerah"
+    ],
+    "contoh_jabatan": [
+      "Camat",
+      "Kepala Dinas",
+      "Lurah",
+      "Sekretaris Daerah",
+      "Pejabat Eselon di Pemda"
+    ],
+    "ikatan_dinas": true,
+    "biaya_pendidikan": "Gratis (ditanggung negara)",
+    "keterangan_ikatan_dinas": "Lulusan ditempatkan di pemerintah daerah sesuai kuota penerimaan dan daerah asal.",
+    "persyaratan_khusus": "Ada ketentuan tinggi badan; tidak bertato/tindik; sehat jasmani dan rohani; sistem semi-militer. Cek situs resmi.",
+    "catatan": "Persyaratan usia, tinggi badan, dan kuota berubah tiap tahun. Pendaftaran melalui portal SSCASN BKN.",
+    "tags": ["pamong praja", "pemerintahan daerah", "kemendagri", "administrasi negara"]
+  },
+  {
+    "id": "stis",
+    "nama": "Politeknik Statistika STIS",
+    "singkatan": "Polstat STIS",
+    "kementerian": "Badan Pusat Statistik (BPS)",
+    "bidang": "statistik",
+    "bidang_label": "Statistik",
+    "lokasi": "Jakarta Timur, DKI Jakarta",
+    "website": "https://stis.ac.id",
+    "portal_pendaftaran": "https://stis.ac.id",
+    "deskripsi_singkat": "Sekolah tinggi kedinasan milik BPS yang mencetak ahli statistik dan komputasi data untuk mendukung sistem data nasional.",
+    "deskripsi_lengkap": "Politeknik Statistika STIS adalah perguruan tinggi kedinasan di bawah Badan Pusat Statistik (BPS) RI. Mahasiswa dididik untuk menjadi tenaga ahli di bidang statistik dan komputasi statistik yang akan bertugas mengumpulkan, mengolah, dan menyajikan data statistik nasional. Lulusan tersebar di kantor BPS di seluruh provinsi, kabupaten, dan kota Indonesia.",
+    "prodi": [
+      { "jenjang": "D-III", "nama": "Statistika" },
+      { "jenjang": "D-IV", "nama": "Statistika" },
+      { "jenjang": "D-IV", "nama": "Komputasi Statistik" }
+    ],
+    "penempatan_instansi": [
+      "Badan Pusat Statistik (BPS) Pusat",
+      "BPS Provinsi seluruh Indonesia",
+      "BPS Kabupaten/Kota seluruh Indonesia"
+    ],
+    "contoh_jabatan": [
+      "Statistisi Ahli",
+      "Pranata Komputer",
+      "Analis Data",
+      "Koordinator Statistik Kecamatan"
+    ],
+    "ikatan_dinas": true,
+    "biaya_pendidikan": "Gratis (ditanggung negara)",
+    "keterangan_ikatan_dinas": "Lulusan ditempatkan di kantor BPS sesuai kebutuhan dan hasil seleksi.",
+    "persyaratan_khusus": "Kemampuan matematika yang baik; tidak buta warna. Cek situs resmi untuk ketentuan lengkap.",
+    "catatan": "Persyaratan dan jadwal pendaftaran dapat berubah tiap tahun. Cek pengumuman di situs resmi BPS dan STIS.",
+    "tags": ["statistik", "matematika", "data", "BPS", "komputasi"]
+  },
+  {
+    "id": "stmkg",
+    "nama": "Sekolah Tinggi Meteorologi Klimatologi dan Geofisika",
+    "singkatan": "STMKG",
+    "kementerian": "Badan Meteorologi, Klimatologi, dan Geofisika (BMKG)",
+    "bidang": "meteorologi",
+    "bidang_label": "Meteorologi",
+    "lokasi": "Pondok Betung, Tangerang Selatan, Banten",
+    "website": "https://stmkg.ac.id",
+    "portal_pendaftaran": "https://stmkg.ac.id",
+    "deskripsi_singkat": "Sekolah kedinasan BMKG yang mendidik ahli cuaca, iklim, gempa bumi, dan instrumentasi untuk keselamatan masyarakat Indonesia.",
+    "deskripsi_lengkap": "STMKG adalah perguruan tinggi kedinasan di bawah Badan Meteorologi, Klimatologi, dan Geofisika (BMKG) RI. Mahasiswa dididik untuk menjadi tenaga ahli dalam bidang prakiraan cuaca, klimatologi, geofisika (pemantauan gempa dan tsunami), serta pengoperasian instrumen MKG. Peran lulusannya sangat penting bagi keselamatan penerbangan, pelayaran, dan mitigasi bencana alam.",
+    "prodi": [
+      { "jenjang": "D-IV", "nama": "Meteorologi" },
+      { "jenjang": "D-IV", "nama": "Klimatologi" },
+      { "jenjang": "D-IV", "nama": "Geofisika" },
+      { "jenjang": "D-IV", "nama": "Instrumentasi-MKG" }
+    ],
+    "penempatan_instansi": [
+      "Stasiun Meteorologi (bandara, maritim) seluruh Indonesia",
+      "Stasiun Klimatologi",
+      "Stasiun Geofisika",
+      "BMKG Pusat"
+    ],
+    "contoh_jabatan": [
+      "Prakirawan Cuaca",
+      "Analis Iklim",
+      "Analis Geofisika",
+      "Teknisi Instrumentasi MKG"
+    ],
+    "ikatan_dinas": true,
+    "biaya_pendidikan": "Gratis (ditanggung negara)",
+    "keterangan_ikatan_dinas": "Lulusan ditempatkan di stasiun BMKG yang tersebar di seluruh pelosok Indonesia.",
+    "persyaratan_khusus": "Tidak buta warna; sehat jasmani dan rohani. Cek situs resmi untuk ketentuan lengkap.",
+    "catatan": "Persyaratan dan jadwal pendaftaran dapat berubah tiap tahun. Selalu cek situs resmi BMKG dan STMKG.",
+    "tags": ["cuaca", "iklim", "geofisika", "gempa", "BMKG", "sains"]
+  },
+  {
+    "id": "poltekim",
+    "nama": "Politeknik Imigrasi",
+    "singkatan": "Poltekim",
+    "kementerian": "Kementerian Hukum dan HAM (Ditjen Imigrasi)",
+    "bidang": "hukum",
+    "bidang_label": "Imigrasi & Hukum",
+    "lokasi": "Depok, Jawa Barat",
+    "website": "https://poltekim.ac.id",
+    "portal_pendaftaran": "https://poltekim.ac.id",
+    "deskripsi_singkat": "Sekolah kedinasan Ditjen Imigrasi yang mendidik calon petugas penjaga pintu masuk dan keluar wilayah Indonesia.",
+    "deskripsi_lengkap": "Politeknik Imigrasi (Poltekim) adalah perguruan tinggi kedinasan di bawah Direktorat Jenderal Imigrasi, Kementerian Hukum dan HAM RI. Mahasiswa dididik untuk menguasai hukum keimigrasian, administrasi imigrasi, dan teknologi imigrasi. Lulusannya bertugas di kantor imigrasi dan pos perlintasan batas di seluruh Indonesia.",
+    "prodi": [
+      { "jenjang": "D-IV", "nama": "Hukum Keimigrasian" },
+      { "jenjang": "D-IV", "nama": "Administrasi Keimigrasian" },
+      { "jenjang": "D-IV", "nama": "Manajemen Teknologi Keimigrasian" }
+    ],
+    "penempatan_instansi": [
+      "Kantor Imigrasi seluruh Indonesia",
+      "Kantor Wilayah Kemenkumham",
+      "Pos Lintas Batas Negara (PLBN)",
+      "Tempat Pemeriksaan Imigrasi (TPI) di bandara/pelabuhan"
+    ],
+    "contoh_jabatan": [
+      "Pemeriksa Keimigrasian",
+      "PPNS Imigrasi",
+      "Petugas TPI",
+      "Analis Imigrasi"
+    ],
+    "ikatan_dinas": true,
+    "biaya_pendidikan": "Gratis (ditanggung negara)",
+    "keterangan_ikatan_dinas": "Lulusan ditempatkan di kantor imigrasi sesuai kebutuhan seluruh Indonesia.",
+    "persyaratan_khusus": "Ada ketentuan tinggi badan; tidak bertato/tindik; tidak buta warna. Cek situs resmi.",
+    "catatan": "Persyaratan dan kuota berubah tiap tahun. Selalu cek situs resmi Poltekim dan pengumuman Kemenkumham.",
+    "tags": ["imigrasi", "hukum", "perbatasan", "kemenkumham", "paspor"]
+  },
+  {
+    "id": "poltekip",
+    "nama": "Politeknik Ilmu Pemasyarakatan",
+    "singkatan": "Poltekip",
+    "kementerian": "Kementerian Hukum dan HAM (Ditjen Pemasyarakatan)",
+    "bidang": "hukum",
+    "bidang_label": "Imigrasi & Hukum",
+    "lokasi": "Depok, Jawa Barat",
+    "website": "https://poltekip.ac.id",
+    "portal_pendaftaran": "https://poltekip.ac.id",
+    "deskripsi_singkat": "Sekolah kedinasan yang mendidik petugas pemasyarakatan untuk mengelola lapas, rutan, dan pembinaan warga binaan.",
+    "deskripsi_lengkap": "Politeknik Ilmu Pemasyarakatan (Poltekip) adalah perguruan tinggi kedinasan di bawah Direktorat Jenderal Pemasyarakatan, Kemenkumham RI. Mahasiswa dididik untuk menjadi petugas pemasyarakatan yang profesional dalam mengelola lapas, rutan, dan bapas, serta membina warga binaan pemasyarakatan agar dapat kembali ke masyarakat.",
+    "prodi": [
+      { "jenjang": "D-IV", "nama": "Teknik Pemasyarakatan" },
+      { "jenjang": "D-IV", "nama": "Manajemen Pemasyarakatan" },
+      { "jenjang": "D-IV", "nama": "Bimbingan Kemasyarakatan" }
+    ],
+    "penempatan_instansi": [
+      "Lembaga Pemasyarakatan (Lapas) seluruh Indonesia",
+      "Rumah Tahanan Negara (Rutan)",
+      "Balai Pemasyarakatan (Bapas)",
+      "Rumah Penyimpanan Benda Sitaan Negara (Rupbasan)"
+    ],
+    "contoh_jabatan": [
+      "Penjaga Tahanan",
+      "Pembimbing Kemasyarakatan",
+      "Pengaman Lapas",
+      "Petugas Registrasi"
+    ],
+    "ikatan_dinas": true,
+    "biaya_pendidikan": "Gratis (ditanggung negara)",
+    "keterangan_ikatan_dinas": "Lulusan ditempatkan di satuan kerja pemasyarakatan sesuai kebutuhan seluruh Indonesia.",
+    "persyaratan_khusus": "Ada ketentuan tinggi badan; sehat jasmani dan rohani; tidak bertato. Cek situs resmi.",
+    "catatan": "Persyaratan dan kuota berubah tiap tahun. Selalu cek situs resmi Poltekip.",
+    "tags": ["pemasyarakatan", "lapas", "kemenkumham", "hukum", "pembinaan"]
+  },
+  {
+    "id": "pssn",
+    "nama": "Politeknik Siber dan Sandi Negara",
+    "singkatan": "PSSN",
+    "kementerian": "Badan Siber dan Sandi Negara (BSSN)",
+    "bidang": "siber",
+    "bidang_label": "Siber & Sandi",
+    "lokasi": "Bogor, Jawa Barat",
+    "website": "https://pssn.ac.id",
+    "portal_pendaftaran": "https://pssn.ac.id",
+    "deskripsi_singkat": "Satu-satunya sekolah kedinasan yang mendidik ahli keamanan siber dan kriptografi untuk melindungi sistem informasi negara.",
+    "deskripsi_lengkap": "Politeknik Siber dan Sandi Negara (PSSN) adalah perguruan tinggi kedinasan di bawah Badan Siber dan Sandi Negara (BSSN) RI. Mahasiswa dididik untuk menjadi ahli dalam bidang keamanan siber, kriptografi, dan keamanan informasi. Lulusan berperan penting dalam menjaga ketahanan siber nasional dan keamanan komunikasi pemerintah di era digital.",
+    "prodi": [
+      { "jenjang": "D-IV", "nama": "Rekayasa Keamanan Siber" },
+      { "jenjang": "D-IV", "nama": "Rekayasa Kriptografi" },
+      { "jenjang": "D-IV", "nama": "Rekayasa Perangkat Keras Kriptografi" }
+    ],
+    "penempatan_instansi": [
+      "Badan Siber dan Sandi Negara (BSSN) Pusat",
+      "Unit Siber berbagai Kementerian/Lembaga",
+      "Lembaga Sandi Negara di daerah"
+    ],
+    "contoh_jabatan": [
+      "Analis Keamanan Siber",
+      "Sandiman",
+      "Pengembang Sistem Kriptografi",
+      "Analis Forensik Digital"
+    ],
+    "ikatan_dinas": true,
+    "biaya_pendidikan": "Gratis (ditanggung negara)",
+    "keterangan_ikatan_dinas": "Lulusan ditempatkan di lingkungan BSSN dan instansi mitra.",
+    "persyaratan_khusus": "Kemampuan matematika dan logika yang kuat; tidak buta warna; sehat jasmani dan rohani. Cek situs resmi.",
+    "catatan": "Persyaratan dan kuota berubah tiap tahun. Selalu cek situs resmi PSSN dan BSSN.",
+    "tags": ["keamanan siber", "kriptografi", "cybersecurity", "BSSN", "teknologi", "sandi"]
+  },
+  {
+    "id": "stip",
+    "nama": "Sekolah Tinggi Ilmu Pelayaran Jakarta",
+    "singkatan": "STIP Jakarta",
+    "kementerian": "Kementerian Perhubungan",
+    "bidang": "transportasi",
+    "bidang_label": "Transportasi",
+    "lokasi": "Jakarta Utara, DKI Jakarta",
+    "website": "https://stipjakarta.ac.id",
+    "portal_pendaftaran": "https://stipjakarta.ac.id",
+    "deskripsi_singkat": "Sekolah pelayaran tertua di Indonesia, mendidik perwira kapal dan tenaga ahli kepelabuhanan untuk industri maritim.",
+    "deskripsi_lengkap": "Sekolah Tinggi Ilmu Pelayaran (STIP) Jakarta adalah perguruan tinggi di bawah Kementerian Perhubungan yang menghasilkan SDM pelayaran profesional. Dikenal sebagai sekolah pelayaran tertua di Indonesia, STIP mendidik para perwira kapal dan tenaga ahli kepelabuhanan yang siap bersaing di pasar pelayaran nasional dan internasional.",
+    "prodi": [
+      { "jenjang": "D-IV", "nama": "Nautika" },
+      { "jenjang": "D-IV", "nama": "Teknika" },
+      { "jenjang": "D-IV", "nama": "Ketatalaksanaan Angkutan Laut dan Kepelabuhanan (KALK)" }
+    ],
+    "penempatan_instansi": [
+      "Direktorat Jenderal Perhubungan Laut",
+      "Perusahaan Pelayaran (PELNI, swasta)",
+      "Syahbandar",
+      "Pelindo (Pelabuhan Indonesia)"
+    ],
+    "contoh_jabatan": [
+      "Perwira Kapal (Mualim/Chief Officer)",
+      "Perwira Mesin Kapal (KKM)",
+      "Pejabat Syahbandar",
+      "Pengelola Kepelabuhanan"
+    ],
+    "ikatan_dinas": false,
+    "biaya_pendidikan": "Cek situs resmi (ada program reguler dan kedinasan)",
+    "keterangan_ikatan_dinas": "Tidak semua program STIP merupakan program ikatan dinas. Cek ketentuan terbaru di situs resmi.",
+    "persyaratan_khusus": "Tidak buta warna; sehat jasmani dan rohani; memiliki kemampuan berenang. Cek situs resmi.",
+    "catatan": "STIP memiliki program reguler dan program kedinasan. Status ikatan dinas dapat berbeda tiap angkatan. Cek situs resmi.",
+    "tags": ["pelayaran", "nautika", "kapal", "kemenhub", "maritim", "jakarta"]
+  },
+  {
+    "id": "pip-semarang",
+    "nama": "Politeknik Ilmu Pelayaran Semarang",
+    "singkatan": "PIP Semarang",
+    "kementerian": "Kementerian Perhubungan",
+    "bidang": "transportasi",
+    "bidang_label": "Transportasi",
+    "lokasi": "Semarang, Jawa Tengah",
+    "website": "https://pip-semarang.ac.id",
+    "portal_pendaftaran": "https://pip-semarang.ac.id",
+    "deskripsi_singkat": "Politeknik pelayaran Kemenhub di Semarang yang mendidik perwira dan tenaga ahli untuk sektor maritim Indonesia.",
+    "deskripsi_lengkap": "Politeknik Ilmu Pelayaran (PIP) Semarang adalah perguruan tinggi di bawah Kementerian Perhubungan yang berfokus pada pendidikan SDM pelayaran. Berlokasi di kota pelabuhan Semarang, PIP Semarang mendidik para calon perwira kapal dan tenaga ahli kepelabuhanan untuk mendukung sektor maritim nasional.",
+    "prodi": [
+      { "jenjang": "D-IV", "nama": "Nautika" },
+      { "jenjang": "D-IV", "nama": "Teknika" },
+      { "jenjang": "D-IV", "nama": "KALK" },
+      { "jenjang": "D-III", "nama": "Nautika" },
+      { "jenjang": "D-III", "nama": "Teknika" }
+    ],
+    "penempatan_instansi": [
+      "Perusahaan Pelayaran Nasional dan Internasional",
+      "Direktorat Jenderal Perhubungan Laut",
+      "Pelindo dan BUMN Maritim"
+    ],
+    "contoh_jabatan": [
+      "Perwira Kapal (Mualim)",
+      "Kepala Kamar Mesin (KKM)",
+      "Pengelola Pelabuhan"
+    ],
+    "ikatan_dinas": false,
+    "biaya_pendidikan": "Cek situs resmi",
+    "keterangan_ikatan_dinas": "Status ikatan dinas mengikuti ketentuan Kemenhub. Cek pengumuman terbaru.",
+    "persyaratan_khusus": "Tidak buta warna; sehat; mampu berenang. Cek situs resmi.",
+    "catatan": "Persyaratan dan kuota berubah tiap tahun. Selalu cek situs resmi PIP Semarang.",
+    "tags": ["pelayaran", "nautika", "kapal", "kemenhub", "maritim", "semarang"]
+  },
+  {
+    "id": "pip-makassar",
+    "nama": "Politeknik Ilmu Pelayaran Makassar",
+    "singkatan": "PIP Makassar",
+    "kementerian": "Kementerian Perhubungan",
+    "bidang": "transportasi",
+    "bidang_label": "Transportasi",
+    "lokasi": "Makassar, Sulawesi Selatan",
+    "website": "https://pip-makassar.ac.id",
+    "portal_pendaftaran": "https://pip-makassar.ac.id",
+    "deskripsi_singkat": "Politeknik pelayaran Kemenhub di Makassar sebagai gerbang maritim Indonesia Timur untuk mendidik perwira kapal.",
+    "deskripsi_lengkap": "Politeknik Ilmu Pelayaran (PIP) Makassar adalah perguruan tinggi di bawah Kementerian Perhubungan yang berlokasi di Makassar, kota strategis bagi pelayaran Indonesia Timur. PIP Makassar mendidik SDM pelayaran untuk mendukung konektivitas maritim di kawasan timur Indonesia.",
+    "prodi": [
+      { "jenjang": "D-IV", "nama": "Nautika" },
+      { "jenjang": "D-IV", "nama": "Teknika" },
+      { "jenjang": "D-IV", "nama": "KALK" }
+    ],
+    "penempatan_instansi": [
+      "Perusahaan Pelayaran Nasional",
+      "Direktorat Jenderal Perhubungan Laut",
+      "Pelindo dan BUMN Maritim"
+    ],
+    "contoh_jabatan": [
+      "Perwira Kapal (Mualim)",
+      "Kepala Kamar Mesin",
+      "Pengelola Pelabuhan"
+    ],
+    "ikatan_dinas": false,
+    "biaya_pendidikan": "Cek situs resmi",
+    "keterangan_ikatan_dinas": "Status ikatan dinas mengikuti ketentuan Kemenhub. Cek pengumuman terbaru.",
+    "persyaratan_khusus": "Tidak buta warna; sehat; mampu berenang. Cek situs resmi.",
+    "catatan": "Persyaratan dan kuota berubah tiap tahun. Selalu cek situs resmi PIP Makassar.",
+    "tags": ["pelayaran", "nautika", "kapal", "kemenhub", "maritim", "makassar"]
+  },
+  {
+    "id": "ppic",
+    "nama": "Politeknik Penerbangan Indonesia Curug",
+    "singkatan": "PPIC Curug",
+    "kementerian": "Kementerian Perhubungan",
+    "bidang": "transportasi",
+    "bidang_label": "Transportasi",
+    "lokasi": "Curug, Tangerang, Banten",
+    "website": "https://ppicurug.ac.id",
+    "portal_pendaftaran": "https://ppicurug.ac.id",
+    "deskripsi_singkat": "Politeknik penerbangan tertua di Indonesia, mendidik teknisi, navigator udara, dan manajer bandara untuk industri aviasi.",
+    "deskripsi_lengkap": "Politeknik Penerbangan Indonesia (PPIC) Curug adalah perguruan tinggi di bawah Kementerian Perhubungan, merupakan sekolah penerbangan tertua di Indonesia. PPIC mendidik tenaga ahli teknis penerbangan, navigasi udara, teknisi pesawat, dan manajemen bandara untuk mendukung industri penerbangan nasional yang terus berkembang.",
+    "prodi": [
+      { "jenjang": "D-III/D-IV", "nama": "Teknik Pesawat Udara" },
+      { "jenjang": "D-III/D-IV", "nama": "Teknik Navigasi Udara" },
+      { "jenjang": "D-III/D-IV", "nama": "Teknik Listrik Bandara" },
+      { "jenjang": "D-III/D-IV", "nama": "Teknik Bangunan dan Landasan" },
+      { "jenjang": "D-III/D-IV", "nama": "Teknik Telekomunikasi dan Navigasi Udara" },
+      { "jenjang": "D-III/D-IV", "nama": "Manajemen Bandar Udara" }
+    ],
+    "penempatan_instansi": [
+      "Direktorat Jenderal Perhubungan Udara",
+      "AirNav Indonesia",
+      "Angkasa Pura I dan II",
+      "Maskapai Penerbangan Nasional"
+    ],
+    "contoh_jabatan": [
+      "Air Traffic Controller (ATC)",
+      "Teknisi Pesawat Udara (AME)",
+      "Teknisi Navigasi Udara",
+      "Manajer Bandara"
+    ],
+    "ikatan_dinas": false,
+    "biaya_pendidikan": "Cek situs resmi",
+    "keterangan_ikatan_dinas": "Status ikatan dinas mengikuti ketentuan Kemenhub. Cek pengumuman terbaru.",
+    "persyaratan_khusus": "Tidak buta warna; sehat mata dan jasmani; bebas narkoba. Cek situs resmi untuk program dan ketentuan spesifik.",
+    "catatan": "PPIC memiliki banyak program studi. Ketentuan per program bisa berbeda. Selalu cek situs resmi.",
+    "tags": ["penerbangan", "ATC", "bandara", "kemenhub", "aviasi", "curug"]
+  },
+  {
+    "id": "poltekbang-surabaya",
+    "nama": "Politeknik Penerbangan Surabaya",
+    "singkatan": "Poltekbang Surabaya",
+    "kementerian": "Kementerian Perhubungan",
+    "bidang": "transportasi",
+    "bidang_label": "Transportasi",
+    "lokasi": "Surabaya, Jawa Timur",
+    "website": "https://poltekbang-surabaya.ac.id",
+    "portal_pendaftaran": "https://poltekbang-surabaya.ac.id",
+    "deskripsi_singkat": "Politeknik penerbangan Kemenhub di Surabaya yang mencetak tenaga ahli teknis dan operasional industri aviasi nasional.",
+    "deskripsi_lengkap": "Politeknik Penerbangan Surabaya adalah perguruan tinggi di bawah Kementerian Perhubungan yang mendidik SDM teknis dan operasional penerbangan. Berlokasi di kota terbesar kedua Indonesia, Poltekbang Surabaya berperan mendukung kebutuhan industri penerbangan di kawasan Jawa Timur dan sekitarnya.",
+    "prodi": [
+      { "jenjang": "D-III/D-IV", "nama": "Teknik Pesawat Udara" },
+      { "jenjang": "D-III/D-IV", "nama": "Teknik Navigasi Udara" },
+      { "jenjang": "D-III/D-IV", "nama": "Teknik Listrik Bandara" }
+    ],
+    "penempatan_instansi": [
+      "Direktorat Jenderal Perhubungan Udara",
+      "AirNav Indonesia",
+      "Angkasa Pura",
+      "Maskapai Penerbangan"
+    ],
+    "contoh_jabatan": [
+      "Air Traffic Controller",
+      "Teknisi Pesawat Udara",
+      "Teknisi Navigasi Udara"
+    ],
+    "ikatan_dinas": false,
+    "biaya_pendidikan": "Cek situs resmi",
+    "keterangan_ikatan_dinas": "Status ikatan dinas mengikuti ketentuan Kemenhub.",
+    "persyaratan_khusus": "Tidak buta warna; sehat mata dan jasmani. Cek situs resmi.",
+    "catatan": "Persyaratan dan kuota berubah tiap tahun. Selalu cek situs resmi.",
+    "tags": ["penerbangan", "ATC", "bandara", "kemenhub", "surabaya", "aviasi"]
+  },
+  {
+    "id": "poltekbang-makassar",
+    "nama": "Politeknik Penerbangan Makassar",
+    "singkatan": "Poltekbang Makassar",
+    "kementerian": "Kementerian Perhubungan",
+    "bidang": "transportasi",
+    "bidang_label": "Transportasi",
+    "lokasi": "Makassar, Sulawesi Selatan",
+    "website": "https://poltekbang-makassar.ac.id",
+    "portal_pendaftaran": "https://poltekbang-makassar.ac.id",
+    "deskripsi_singkat": "Politeknik penerbangan Kemenhub di Makassar yang mendidik tenaga ahli aviasi untuk mendukung konektivitas udara Indonesia Timur.",
+    "deskripsi_lengkap": "Politeknik Penerbangan Makassar adalah perguruan tinggi di bawah Kementerian Perhubungan yang mendidik tenaga ahli teknis penerbangan. Berlokasi di Makassar sebagai hub penerbangan utama Indonesia Timur, Poltekbang Makassar berperan strategis dalam mendukung konektivitas udara kawasan timur Indonesia.",
+    "prodi": [
+      { "jenjang": "D-III/D-IV", "nama": "Teknik Pesawat Udara" },
+      { "jenjang": "D-III/D-IV", "nama": "Teknik Navigasi Udara" },
+      { "jenjang": "D-III/D-IV", "nama": "Teknik Bangunan dan Landasan" }
+    ],
+    "penempatan_instansi": [
+      "Direktorat Jenderal Perhubungan Udara",
+      "AirNav Indonesia",
+      "Angkasa Pura",
+      "Maskapai Penerbangan"
+    ],
+    "contoh_jabatan": [
+      "Air Traffic Controller",
+      "Teknisi Pesawat Udara",
+      "Pengelola Bandara"
+    ],
+    "ikatan_dinas": false,
+    "biaya_pendidikan": "Cek situs resmi",
+    "keterangan_ikatan_dinas": "Status ikatan dinas mengikuti ketentuan Kemenhub.",
+    "persyaratan_khusus": "Tidak buta warna; sehat mata dan jasmani. Cek situs resmi.",
+    "catatan": "Persyaratan dan kuota berubah tiap tahun. Selalu cek situs resmi.",
+    "tags": ["penerbangan", "ATC", "bandara", "kemenhub", "makassar", "aviasi"]
+  },
+  {
+    "id": "ptdi-sttd",
+    "nama": "Politeknik Transportasi Darat Indonesia - STTD",
+    "singkatan": "PTDI-STTD",
+    "kementerian": "Kementerian Perhubungan",
+    "bidang": "transportasi",
+    "bidang_label": "Transportasi",
+    "lokasi": "Bekasi, Jawa Barat",
+    "website": "https://ptdisttd.ac.id",
+    "portal_pendaftaran": "https://ptdisttd.ac.id",
+    "deskripsi_singkat": "Politeknik transportasi darat Kemenhub yang mendidik tenaga ahli manajemen lalu lintas, LLAJ, dan perkeretaapian.",
+    "deskripsi_lengkap": "Politeknik Transportasi Darat Indonesia (PTDI-STTD) adalah perguruan tinggi di bawah Kementerian Perhubungan yang berfokus pada pendidikan SDM transportasi darat. PTDI-STTD mendidik tenaga ahli di bidang manajemen lalu lintas, angkutan umum, perkeretaapian, dan ASDP untuk mendukung sistem transportasi darat nasional.",
+    "prodi": [
+      { "jenjang": "D-III", "nama": "Manajemen Transportasi Jalan" },
+      { "jenjang": "D-IV", "nama": "Transportasi Darat" },
+      { "jenjang": "D-III", "nama": "Perkeretaapian" },
+      { "jenjang": "D-IV", "nama": "Manajemen Keselamatan Transportasi Jalan" }
+    ],
+    "penempatan_instansi": [
+      "Direktorat Jenderal Perhubungan Darat",
+      "Dinas Perhubungan Provinsi/Kabupaten/Kota",
+      "PT Kereta Api Indonesia (KAI)",
+      "ASDP Indonesia Ferry"
+    ],
+    "contoh_jabatan": [
+      "Penguji Kendaraan Bermotor",
+      "Petugas LLAJ",
+      "Manajer Transportasi Darat",
+      "Pengawas Perkeretaapian"
+    ],
+    "ikatan_dinas": false,
+    "biaya_pendidikan": "Cek situs resmi",
+    "keterangan_ikatan_dinas": "Status ikatan dinas mengikuti ketentuan Kemenhub.",
+    "persyaratan_khusus": "Sehat jasmani dan rohani; tidak buta warna. Cek situs resmi.",
+    "catatan": "Persyaratan dan kuota berubah tiap tahun. Selalu cek situs resmi PTDI-STTD.",
+    "tags": ["transportasi darat", "lalu lintas", "perkeretaapian", "kemenhub", "LLAJ", "bekasi"]
+  },
+  {
+    "id": "poltrada-bali",
+    "nama": "Politeknik Transportasi Darat Bali",
+    "singkatan": "Poltrada Bali",
+    "kementerian": "Kementerian Perhubungan",
+    "bidang": "transportasi",
+    "bidang_label": "Transportasi",
+    "lokasi": "Tabanan, Bali",
+    "website": "https://poltradabali.ac.id",
+    "portal_pendaftaran": "https://poltradabali.ac.id",
+    "deskripsi_singkat": "Politeknik transportasi darat Kemenhub di Bali yang mendidik tenaga ahli keselamatan jalan, otomotif, dan logistik.",
+    "deskripsi_lengkap": "Politeknik Transportasi Darat (Poltrada) Bali adalah perguruan tinggi di bawah Kementerian Perhubungan RI yang berfokus pada keahlian keselamatan jalan raya, manajemen logistik pergudangan, dan teknologi rekayasa otomotif. Didukung fasilitas pengujian kendaraan modern di Pulau Dewata.",
+    "prodi": [
+      { "jenjang": "D-III", "nama": "Manajemen Transportasi Jalan" },
+      { "jenjang": "D-III", "nama": "Teknologi Otomotif" },
+      { "jenjang": "D-III", "nama": "Manajemen Logistik" }
+    ],
+    "penempatan_instansi": [
+      "Direktorat Jenderal Perhubungan Darat",
+      "Balai Pengelola Transportasi Darat (BPTD)",
+      "Dinas Perhubungan Provinsi/Kabupaten/Kota",
+      "Perusahaan BUMN & Swasta Sektor Logistik"
+    ],
+    "contoh_jabatan": [
+      "Penguji Kendaraan Bermotor",
+      "Inspektur Keselamatan Jalan",
+      "Analis Manajemen Logistik Darat",
+      "Teknisi Rekayasa Kendaraan"
+    ],
+    "ikatan_dinas": false,
+    "biaya_pendidikan": "Cek situs resmi (Program Polbit / Mandiri)",
+    "keterangan_ikatan_dinas": "Program Pola Pembibitan (Polbit) berstatus ikatan dinas ASN Kemenhub/Pemda. Program non-polbit mandiri.",
+    "persyaratan_khusus": "Sehat jasmani dan rohani; tidak buta warna; batas tinggi badan sesuai ketetapan Sipencatar. Cek situs resmi.",
+    "catatan": "Persyaratan dan kuota formasi pola pembibitan berubah tiap tahun. Cek pengumuman SIPENCATAR Kemenhub.",
+    "tags": ["transportasi darat", "bali", "otomotif", "logistik", "kemenhub", "keselamatan jalan"]
+  }
+]

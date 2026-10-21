@@ -1,0 +1,2308 @@
+/* ==========================================================================
+   PORTAL KEDINASAN RI - PANDUAN STUDI & KARIER ASN
+   Desain Sistem: Editorial, Tegas, dan Tepercaya
+   Setara Situs Universitas & Lembaga Pemerintah Modern
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. CSS VARIABLES (DESIGN TOKENS)
+   -------------------------------------------------------------------------- */
+:root {
+  /* Palet Warna Primer: Biru Tua Pekat, Emas Hangat, & Putih Tulang */
+  --color-navy-950: #061224;
+  --color-navy-900: #0B1F3A;
+  --color-navy-850: #0F284B;
+  --color-navy-800: #163660;
+  --color-navy-700: #234B80;
+  --color-navy-100: #EAF0F8;
+  --color-navy-50:  #F4F7FB;
+
+  --color-gold-700: #967417;
+  --color-gold-600: #B38C1E;
+  --color-gold-500: #C9A227;
+  --color-gold-400: #DCB844;
+  --color-gold-100: #FAF3DE;
+  --color-gold-50:  #FDFBF4;
+
+  --color-surface-bone: #FAF8F3;
+  --color-surface-card: #FFFFFF;
+  --color-surface-warm: #F4EFE6;
+  --color-surface-muted: #ECE6D8;
+
+  --color-text-title: #0B1F3A;
+  --color-text-body:  #2D3748;
+  --color-text-muted: #5A6A80;
+  --color-text-light: #F7FAFC;
+  --color-text-subtle: #8C9BAE;
+
+  --color-border-subtle: #E2DCD0;
+  --color-border-navy:   rgba(11, 31, 58, 0.15);
+  --color-border-gold:   rgba(201, 162, 39, 0.45);
+  --color-border-dark:   #1E385C;
+
+  /* Status Warna Semantik (Khusus label status) */
+  --color-status-success:    #1B6E41;
+  --color-status-success-bg: #EBF7EE;
+  --color-status-notice:     #9A5E0D;
+  --color-status-notice-bg:  #FEF7E8;
+  --color-status-danger:     #A12B2B;
+  --color-status-danger-bg:  #FDF0F0;
+
+  /* Tipografi */
+  --font-serif: 'Playfair Display', Georgia, Cambria, serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Ritme Vertikal & Spacing Skala 8px */
+  --space-1: 0.25rem;  /* 4px */
+  --space-2: 0.5rem;   /* 8px */
+  --space-3: 0.75rem;  /* 12px */
+  --space-4: 1rem;     /* 16px */
+  --space-5: 1.25rem;  /* 20px */
+  --space-6: 1.5rem;   /* 24px */
+  --space-8: 2rem;     /* 32px */
+  --space-10: 2.5rem;  /* 40px */
+  --space-12: 3rem;    /* 48px */
+  --space-16: 4rem;    /* 64px */
+  --space-20: 5rem;    /* 80px */
+  --space-24: 6rem;    /* 96px */
+
+  /* Sudut Membulat Halus (Konsisten 4 - 8px) */
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+
+  /* Bayangan Sangat Halus */
+  --shadow-subtle: 0 1px 3px rgba(11, 31, 58, 0.05);
+  --shadow-card:   0 2px 8px rgba(11, 31, 58, 0.06);
+  --shadow-elevated: 0 8px 24px rgba(11, 31, 58, 0.09);
+  --shadow-modal:    0 20px 48px rgba(6, 18, 36, 0.28);
+
+  /* Transisi */
+  --transition-fast: 180ms ease;
+  --transition-normal: 260ms ease;
+
+  /* Lebar Kontainer */
+  --container-max-width: 1200px;
+  --container-narrow-width: 860px;
+}
+
+/* --------------------------------------------------------------------------
+   2. RESET & FONDASI DASAR
+   -------------------------------------------------------------------------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: 1.0625rem; /* ~17px body */
+  line-height: 1.68;
+  color: var(--color-text-body);
+  background-color: var(--color-surface-bone);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img, svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: var(--color-navy-900);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-gold-600);
+}
+
+button, input, select, textarea {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+/* Focus visible styling untuk aksesibilitas WCAG */
+:focus-visible {
+  outline: 2px solid var(--color-gold-500);
+  outline-offset: 3px;
+}
+
+/* --------------------------------------------------------------------------
+   3. TIPOGRAFI
+   -------------------------------------------------------------------------- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  color: var(--color-text-title);
+  line-height: 1.25;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+}
+
+h1 {
+  font-size: clamp(2.25rem, 4vw + 1rem, 3.5rem);
+  line-height: 1.15;
+}
+
+h2 {
+  font-size: clamp(1.75rem, 2.5vw + 0.5rem, 2.375rem);
+  line-height: 1.22;
+}
+
+h3 {
+  font-size: clamp(1.25rem, 1.5vw + 0.5rem, 1.5rem);
+}
+
+h4 {
+  font-size: 1.1875rem;
+}
+
+p {
+  margin-bottom: var(--space-4);
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+.lead-text {
+  font-size: 1.1875rem;
+  line-height: 1.7;
+  color: var(--color-text-body);
+}
+
+.kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-gold-700);
+  margin-bottom: var(--space-3);
+}
+
+.kicker-light {
+  color: var(--color-gold-400);
+}
+
+.kicker::before {
+  content: "";
+  display: inline-block;
+  width: 14px;
+  height: 2px;
+  background-color: currentColor;
+}
+
+/* --------------------------------------------------------------------------
+   4. LAYOUT & CONTAINER
+   -------------------------------------------------------------------------- */
+.container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin-inline: auto;
+  padding-inline: var(--space-6);
+}
+
+.container-narrow {
+  max-width: var(--container-narrow-width);
+}
+
+.section-padding {
+  padding-block: var(--space-16);
+}
+
+.section-padding-sm {
+  padding-block: var(--space-10);
+}
+
+/* Header seksi editorial */
+.section-header {
+  margin-bottom: var(--space-12);
+}
+
+.section-header.text-center {
+  text-align: center;
+  max-width: 720px;
+  margin-inline: auto;
+}
+
+.section-header .section-rule {
+  width: 48px;
+  height: 2px;
+  background-color: var(--color-gold-500);
+  margin-block: var(--space-4);
+}
+
+.section-header.text-center .section-rule {
+  margin-inline: auto;
+}
+
+.section-desc {
+  font-size: 1.0625rem;
+  color: var(--color-text-muted);
+  max-width: 680px;
+}
+
+/* --------------------------------------------------------------------------
+   5. TOP BANNER & NAVBAR
+   -------------------------------------------------------------------------- */
+.top-notice-bar {
+  background-color: var(--color-navy-950);
+  color: var(--color-text-light);
+  font-size: 0.8125rem;
+  padding-block: var(--space-2);
+  border-bottom: 1px solid var(--color-border-dark);
+}
+
+.top-notice-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.notice-text {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  opacity: 0.9;
+}
+
+.notice-badge {
+  background-color: var(--color-gold-500);
+  color: var(--color-navy-950);
+  font-weight: 700;
+  font-size: 0.6875rem;
+  padding: 1px 6px;
+  border-radius: var(--radius-xs);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.notice-link {
+  color: var(--color-gold-400);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.notice-link:hover {
+  text-decoration: underline;
+}
+
+/* Sticky Navbar */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 90;
+  background-color: rgba(250, 248, 243, 0.97);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--color-border-subtle);
+  transition: background-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.site-header.scrolled {
+  background-color: rgba(255, 255, 255, 0.98);
+  box-shadow: var(--shadow-subtle);
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 74px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  text-decoration: none;
+  color: var(--color-navy-900);
+}
+
+.brand-emblem {
+  width: 40px;
+  height: 40px;
+  background-color: var(--color-navy-900);
+  color: var(--color-gold-400);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border-dark);
+  flex-shrink: 0;
+}
+
+.brand-text-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-title {
+  font-family: var(--font-serif);
+  font-size: 1.1875rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1.15;
+  color: var(--color-navy-900);
+}
+
+.brand-tagline {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.nav-link {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--color-text-body);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-sm);
+  position: relative;
+  transition: color var(--transition-fast), background-color var(--transition-fast);
+}
+
+.nav-link:hover {
+  color: var(--color-navy-900);
+  background-color: var(--color-surface-warm);
+}
+
+.nav-link.active {
+  color: var(--color-navy-900);
+  background-color: var(--color-gold-100);
+}
+
+.nav-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: var(--space-3);
+  right: var(--space-3);
+  height: 2px;
+  background-color: var(--color-gold-600);
+}
+
+.nav-cta {
+  margin-left: var(--space-2);
+}
+
+/* Hamburger Mobile Toggle */
+.mobile-toggle {
+  display: none;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-navy-900);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-surface-card);
+}
+
+/* --------------------------------------------------------------------------
+   6. TOMBOL & BADGE
+   -------------------------------------------------------------------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  padding: 0.6875rem 1.375rem;
+  border-radius: var(--radius-sm);
+  line-height: 1.25;
+  border: 1px solid transparent;
+  transition: all var(--transition-fast);
+  text-decoration: none;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background-color: var(--color-navy-900);
+  color: #FFFFFF;
+  border-color: var(--color-navy-900);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-navy-800);
+  color: #FFFFFF;
+  border-color: var(--color-navy-800);
+  transform: translateY(-1px);
+}
+
+.btn-gold {
+  background-color: var(--color-gold-500);
+  color: var(--color-navy-950);
+  border-color: var(--color-gold-600);
+  font-weight: 700;
+}
+
+.btn-gold:hover {
+  background-color: var(--color-gold-400);
+  color: var(--color-navy-950);
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--color-navy-900);
+  border-color: var(--color-navy-900);
+}
+
+.btn-outline:hover {
+  background-color: var(--color-navy-900);
+  color: #FFFFFF;
+}
+
+.btn-outline-light {
+  background-color: transparent;
+  color: var(--color-text-light);
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+.btn-outline-light:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #FFFFFF;
+  border-color: #FFFFFF;
+}
+
+.btn-sm {
+  font-size: 0.8125rem;
+  padding: 0.4375rem 0.875rem;
+}
+
+.btn-lg {
+  font-size: 1rem;
+  padding: 0.875rem 1.75rem;
+}
+
+/* Badge & Tag */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: var(--radius-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+}
+
+.badge-navy {
+  background-color: var(--color-navy-100);
+  color: var(--color-navy-900);
+  border: 1px solid rgba(11, 31, 58, 0.12);
+}
+
+.badge-gold {
+  background-color: var(--color-gold-100);
+  color: var(--color-gold-700);
+  border: 1px solid rgba(201, 162, 39, 0.3);
+}
+
+.badge-success {
+  background-color: var(--color-status-success-bg);
+  color: var(--color-status-success);
+  border: 1px solid rgba(27, 110, 65, 0.2);
+}
+
+.badge-neutral {
+  background-color: var(--color-surface-warm);
+  color: var(--color-text-muted);
+  border: 1px solid var(--color-border-subtle);
+}
+
+/* --------------------------------------------------------------------------
+   7. HERO ASIMETRIS (BERANDA)
+   -------------------------------------------------------------------------- */
+.hero-editorial {
+  padding-block: var(--space-12) var(--space-16);
+  border-bottom: 1px solid var(--color-border-subtle);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-editorial::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 35%;
+  height: 100%;
+  background-color: var(--color-surface-warm);
+  z-index: -1;
+  border-left: 1px solid var(--color-border-subtle);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: var(--space-12);
+  align-items: center;
+}
+
+.hero-content {
+  padding-right: var(--space-4);
+}
+
+.hero-title {
+  margin-bottom: var(--space-5);
+  color: var(--color-navy-900);
+}
+
+.hero-lead {
+  font-size: 1.1875rem;
+  line-height: 1.7;
+  color: var(--color-text-body);
+  margin-bottom: var(--space-8);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  margin-bottom: var(--space-10);
+}
+
+.hero-meta-bar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--color-border-subtle);
+}
+
+.meta-item-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-1);
+}
+
+.meta-item-value {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-navy-900);
+}
+
+/* Panel Visual Kanan (Framed Editorial Card) */
+.hero-visual-card {
+  background-color: var(--color-navy-900);
+  color: var(--color-text-light);
+  border-radius: var(--radius-md);
+  padding: var(--space-8);
+  border: 1px solid var(--color-border-dark);
+  position: relative;
+  box-shadow: var(--shadow-elevated);
+}
+
+.hero-visual-card::after {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  border: 1px solid rgba(201, 162, 39, 0.25);
+  border-radius: var(--radius-sm);
+  pointer-events: none;
+}
+
+.card-header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--color-border-dark);
+  margin-bottom: var(--space-6);
+}
+
+.card-category-label {
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--color-gold-400);
+  font-weight: 700;
+}
+
+.hero-visual-title {
+  color: #FFFFFF;
+  font-size: 1.45rem;
+  margin-bottom: var(--space-3);
+  line-height: 1.3;
+}
+
+.hero-visual-lead {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: #C0CDDC;
+  margin-bottom: var(--space-6);
+}
+
+.quick-cluster-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-bottom: var(--space-6);
+}
+
+.cluster-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-3) var(--space-4);
+  background-color: var(--color-navy-850);
+  border: 1px solid var(--color-border-dark);
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+  color: #E2E8F0;
+  transition: all var(--transition-fast);
+}
+
+.cluster-row:hover {
+  background-color: var(--color-navy-800);
+  border-color: var(--color-gold-500);
+  color: #FFFFFF;
+}
+
+.cluster-name {
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.cluster-icon {
+  color: var(--color-gold-400);
+}
+
+.cluster-tag {
+  font-size: 0.75rem;
+  color: var(--color-gold-400);
+}
+
+.card-footnote {
+  font-size: 0.8125rem;
+  color: var(--color-text-subtle);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-border-dark);
+}
+
+/* --------------------------------------------------------------------------
+   8. SEKSI NUMBERED EDITORIAL ("APA ITU KEDINASAN?")
+   -------------------------------------------------------------------------- */
+.pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-8);
+}
+
+.pillar-card {
+  background-color: var(--color-surface-card);
+  padding: var(--space-8);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-sm);
+  position: relative;
+  transition: border-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.pillar-card:hover {
+  border-color: var(--color-gold-500);
+  transform: translateY(-2px);
+}
+
+.pillar-num {
+  font-family: var(--font-serif);
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: var(--color-gold-600);
+  line-height: 1;
+  margin-bottom: var(--space-4);
+  opacity: 0.85;
+}
+
+.pillar-title {
+  font-size: 1.25rem;
+  color: var(--color-navy-900);
+  margin-bottom: var(--space-3);
+}
+
+.pillar-text {
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  color: var(--color-text-muted);
+}
+
+/* --------------------------------------------------------------------------
+   9. SEKSI KEUNGGULAN VS PERTIMBANGAN (DUA KOLOM BERIMBANG)
+   -------------------------------------------------------------------------- */
+.comparison-section {
+  background-color: var(--color-surface-warm);
+  border-block: 1px solid var(--color-border-subtle);
+}
+
+.comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-8);
+}
+
+.comparison-column {
+  background-color: var(--color-surface-card);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border-subtle);
+  padding: var(--space-8);
+}
+
+.comparison-column.positive {
+  border-top: 4px solid var(--color-status-success);
+}
+
+.comparison-column.caution {
+  border-top: 4px solid var(--color-gold-600);
+}
+
+.column-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-6);
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.column-icon-box {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.column-icon-box.success {
+  background-color: var(--color-status-success-bg);
+  color: var(--color-status-success);
+}
+
+.column-icon-box.alert {
+  background-color: var(--color-status-notice-bg);
+  color: var(--color-status-notice);
+}
+
+.comparison-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.comparison-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+}
+
+.item-bullet {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.item-bullet.green {
+  background-color: var(--color-status-success-bg);
+  color: var(--color-status-success);
+}
+
+.item-bullet.gold {
+  background-color: var(--color-status-notice-bg);
+  color: var(--color-status-notice);
+}
+
+.item-content h4 {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-navy-900);
+  margin-bottom: 2px;
+}
+
+.item-content p {
+  font-size: 0.9375rem;
+  color: var(--color-text-muted);
+  line-height: 1.55;
+}
+
+/* --------------------------------------------------------------------------
+   10. KLASTER SEKOLAH & TIMELINE BERANDA
+   -------------------------------------------------------------------------- */
+.clusters-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-6);
+}
+
+.cluster-card {
+  background-color: var(--color-surface-card);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-sm);
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-fast);
+}
+
+.cluster-card:hover {
+  border-color: var(--color-navy-800);
+  box-shadow: var(--shadow-card);
+  transform: translateY(-2px);
+}
+
+.cluster-icon-header {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  background-color: var(--color-navy-50);
+  color: var(--color-navy-900);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-4);
+  border: 1px solid var(--color-border-subtle);
+}
+
+.cluster-title {
+  font-size: 1.125rem;
+  color: var(--color-navy-900);
+  margin-bottom: var(--space-2);
+}
+
+.cluster-schools {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--color-gold-700);
+  margin-bottom: var(--space-2);
+}
+
+.cluster-desc {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+  margin-top: auto;
+  padding-top: var(--space-2);
+}
+
+/* Timeline Beranda */
+.home-stepper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-6);
+  position: relative;
+}
+
+.step-box {
+  background-color: var(--color-surface-card);
+  padding: var(--space-6);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-sm);
+  position: relative;
+}
+
+.step-counter {
+  font-family: var(--font-serif);
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--color-gold-600);
+  line-height: 1;
+  margin-bottom: var(--space-3);
+}
+
+.step-box h4 {
+  font-size: 1.0625rem;
+  margin-bottom: var(--space-2);
+  color: var(--color-navy-900);
+}
+
+.step-box p {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  line-height: 1.55;
+}
+
+/* --------------------------------------------------------------------------
+   11. HALAMAN DAFTAR SEKOLAH (FILTER, CARDS & MODAL)
+   -------------------------------------------------------------------------- */
+.page-header {
+  background-color: var(--color-navy-950);
+  color: var(--color-text-light);
+  padding-block: var(--space-12) var(--space-10);
+  border-bottom: 1px solid var(--color-border-dark);
+}
+
+.page-header h1 {
+  color: #FFFFFF;
+  margin-bottom: var(--space-3);
+}
+
+.page-header .lead-text {
+  color: #C0CDDC;
+  max-width: 780px;
+}
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 0.8125rem;
+  color: var(--color-gold-400);
+  margin-bottom: var(--space-4);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+}
+
+.breadcrumbs a {
+  color: #A0AEC0;
+}
+
+.breadcrumbs a:hover {
+  color: #FFFFFF;
+}
+
+/* Filter Bar */
+.filter-wrapper {
+  background-color: var(--color-surface-card);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-sm);
+  padding: var(--space-6);
+  margin-bottom: var(--space-8);
+  box-shadow: var(--shadow-subtle);
+}
+
+.filter-top-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  align-items: center;
+  margin-bottom: var(--space-4);
+}
+
+.search-input-group {
+  position: relative;
+  flex: 1;
+  min-width: 260px;
+}
+
+.search-icon {
+  position: absolute;
+  left: var(--space-4);
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-text-muted);
+  pointer-events: none;
+}
+
+.search-input {
+  width: 100%;
+  height: 46px;
+  padding-left: 2.75rem;
+  padding-right: 2.5rem;
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-surface-bone);
+  font-size: 0.9375rem;
+  color: var(--color-text-body);
+  transition: border-color var(--transition-fast), background-color var(--transition-fast);
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--color-navy-900);
+  background-color: #FFFFFF;
+}
+
+.search-clear-btn {
+  position: absolute;
+  right: var(--space-3);
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-text-muted);
+  display: none;
+  padding: 4px;
+}
+
+.search-clear-btn:hover {
+  color: var(--color-navy-900);
+}
+
+/* Chips Bidang */
+.chips-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-2);
+}
+
+.filter-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.chip {
+  padding: 0.375rem 0.875rem;
+  border-radius: var(--radius-sm);
+  background-color: var(--color-surface-warm);
+  border: 1px solid var(--color-border-subtle);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--color-text-body);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.chip:hover {
+  background-color: var(--color-navy-100);
+  border-color: var(--color-navy-700);
+  color: var(--color-navy-900);
+}
+
+.chip.active {
+  background-color: var(--color-navy-900);
+  color: #FFFFFF;
+  border-color: var(--color-navy-900);
+}
+
+/* Filter Status & Counter */
+.filter-meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: var(--space-3);
+  margin-top: var(--space-3);
+  border-top: 1px solid var(--color-border-subtle);
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+}
+
+.status-toggle-wrap {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.toggle-label {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--color-text-body);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+/* Grid Sekolah */
+.schools-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+}
+
+.school-card {
+  background-color: var(--color-surface-card);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-sm);
+  display: flex;
+  flex-direction: column;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast);
+  position: relative;
+}
+
+.school-card:hover {
+  border-color: var(--color-gold-500);
+  box-shadow: var(--shadow-card);
+  transform: translateY(-2px);
+}
+
+.school-card-top {
+  padding: var(--space-6) var(--space-6) var(--space-4);
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.school-badge-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-3);
+  gap: var(--space-2);
+}
+
+.school-acronym {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-navy-900);
+  line-height: 1.2;
+}
+
+.school-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-body);
+  line-height: 1.4;
+  margin-top: 4px;
+}
+
+.school-card-body {
+  padding: var(--space-4) var(--space-6);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.school-info-row {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+}
+
+.school-info-icon {
+  flex-shrink: 0;
+  color: var(--color-gold-600);
+  margin-top: 2px;
+}
+
+.school-desc {
+  font-size: 0.875rem;
+  color: var(--color-text-body);
+  line-height: 1.55;
+  margin-block: var(--space-1);
+}
+
+.school-prodi-preview {
+  margin-top: auto;
+  padding-top: var(--space-3);
+  border-top: 1px dashed var(--color-border-subtle);
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+.prodi-tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 4px;
+}
+
+.prodi-tag {
+  background-color: var(--color-surface-bone);
+  border: 1px solid var(--color-border-subtle);
+  padding: 2px 6px;
+  border-radius: var(--radius-xs);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  color: var(--color-navy-900);
+}
+
+.school-card-footer {
+  padding: var(--space-4) var(--space-6);
+  background-color: var(--color-surface-bone);
+  border-top: 1px solid var(--color-border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: var(--space-12) var(--space-6);
+  background-color: var(--color-surface-card);
+  border: 1px dashed var(--color-border-subtle);
+  border-radius: var(--radius-sm);
+  grid-column: 1 / -1;
+}
+
+.empty-state-icon {
+  margin-inline: auto;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-4);
+}
+
+.empty-state h3 {
+  color: var(--color-navy-900);
+  margin-bottom: var(--space-2);
+}
+
+.empty-state p {
+  color: var(--color-text-muted);
+  max-width: 440px;
+  margin-inline: auto;
+  margin-bottom: var(--space-4);
+  font-size: 0.9375rem;
+}
+
+/* --------------------------------------------------------------------------
+   12. MODAL DIALOG DETAIL SEKOLAH
+   -------------------------------------------------------------------------- */
+body.modal-open {
+  overflow: hidden;
+}
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(6, 18, 36, 0.7);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-4);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--transition-fast), visibility var(--transition-fast);
+}
+
+.modal-backdrop.is-visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-dialog {
+  background-color: var(--color-surface-card);
+  width: 100%;
+  max-width: 760px;
+  max-height: 90vh;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border-subtle);
+  box-shadow: var(--shadow-modal);
+  display: flex;
+  flex-direction: column;
+  transform: translateY(20px);
+  transition: transform var(--transition-normal);
+  overflow: hidden;
+}
+
+.modal-backdrop.is-visible .modal-dialog {
+  transform: translateY(0);
+}
+
+.modal-header {
+  padding: var(--space-6);
+  background-color: var(--color-navy-900);
+  color: #FFFFFF;
+  position: relative;
+  border-bottom: 2px solid var(--color-gold-500);
+}
+
+.modal-header .kicker {
+  color: var(--color-gold-400);
+  margin-bottom: var(--space-1);
+}
+
+.modal-header h2 {
+  color: #FFFFFF;
+  font-size: 1.5rem;
+  line-height: 1.25;
+}
+
+.modal-header .sub-ministry {
+  font-size: 0.875rem;
+  color: #A0B3CC;
+  margin-top: 4px;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: var(--space-6);
+  right: var(--space-6);
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color var(--transition-fast);
+}
+
+.modal-close-btn:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.modal-body {
+  padding: var(--space-6);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.modal-section-title {
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-gold-700);
+  margin-bottom: var(--space-2);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.modal-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4);
+  background-color: var(--color-surface-bone);
+  border: 1px solid var(--color-border-subtle);
+  padding: var(--space-4);
+  border-radius: var(--radius-sm);
+}
+
+.modal-info-item .label {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  letter-spacing: 0.06em;
+}
+
+.modal-info-item .value {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-navy-900);
+  margin-top: 2px;
+}
+
+.prodi-list-detailed {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-2);
+}
+
+.prodi-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-2) var(--space-3);
+  background-color: var(--color-surface-bone);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-xs);
+  font-size: 0.875rem;
+}
+
+.career-bullets {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-2);
+}
+
+.career-bullet-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 0.8125rem;
+  color: var(--color-text-body);
+}
+
+.modal-footer {
+  padding: var(--space-4) var(--space-6);
+  background-color: var(--color-surface-bone);
+  border-top: 1px solid var(--color-border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+/* --------------------------------------------------------------------------
+   13. HALAMAN PERSYARATAN (ACCORDION & TABEL KOMPARASI)
+   -------------------------------------------------------------------------- */
+.requirements-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+  margin-bottom: var(--space-12);
+}
+
+.requirement-box {
+  background-color: var(--color-surface-card);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-sm);
+  padding: var(--space-6);
+}
+
+.req-icon-head {
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-sm);
+  background-color: var(--color-navy-50);
+  color: var(--color-navy-900);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-4);
+  border: 1px solid var(--color-border-subtle);
+}
+
+.requirement-box h3 {
+  font-size: 1.125rem;
+  margin-bottom: var(--space-2);
+  color: var(--color-navy-900);
+}
+
+.requirement-box p {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+/* Accordion */
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-bottom: var(--space-12);
+}
+
+.accordion-item {
+  background-color: var(--color-surface-card);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  transition: border-color var(--transition-fast);
+}
+
+.accordion-item.active {
+  border-color: var(--color-gold-500);
+}
+
+.accordion-trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-5) var(--space-6);
+  text-align: left;
+  background: none;
+  border: none;
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: var(--color-navy-900);
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.accordion-trigger:hover {
+  background-color: var(--color-surface-bone);
+}
+
+.accordion-trigger-title {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.accordion-chevron {
+  transition: transform var(--transition-normal);
+  color: var(--color-text-muted);
+  flex-shrink: 0;
+}
+
+.accordion-item.active .accordion-chevron {
+  transform: rotate(180deg);
+  color: var(--color-navy-900);
+}
+
+.accordion-panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--transition-normal);
+}
+
+.accordion-panel-inner {
+  padding: var(--space-2) var(--space-6) var(--space-6);
+  border-top: 1px solid var(--color-border-subtle);
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  color: var(--color-text-body);
+}
+
+/* Tabel Bergaris Tipis */
+.table-wrapper {
+  overflow-x: auto;
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-surface-card);
+  margin-bottom: var(--space-8);
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.875rem;
+}
+
+.data-table th,
+.data-table td {
+  padding: var(--space-4) var(--space-5);
+  border-bottom: 1px solid var(--color-border-subtle);
+  vertical-align: middle;
+}
+
+.data-table th {
+  background-color: var(--color-navy-900);
+  color: #FFFFFF;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.data-table tbody tr:hover {
+  background-color: var(--color-surface-bone);
+}
+
+.data-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Callout Box Editorial */
+.callout-box {
+  background-color: var(--color-surface-card);
+  border: 1px solid var(--color-border-gold);
+  border-left: 4px solid var(--color-gold-500);
+  border-radius: var(--radius-sm);
+  padding: var(--space-6);
+  margin-block: var(--space-8);
+  display: flex;
+  gap: var(--space-4);
+  align-items: flex-start;
+}
+
+.callout-icon {
+  color: var(--color-gold-700);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.callout-title {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-navy-900);
+  margin-bottom: var(--space-1);
+}
+
+.callout-desc {
+  font-size: 0.875rem;
+  color: var(--color-text-body);
+  line-height: 1.6;
+}
+
+/* --------------------------------------------------------------------------
+   14. HALAMAN JALUR KARIER & TIMELINE VERTIKAL
+   -------------------------------------------------------------------------- */
+.career-timeline {
+  position: relative;
+  margin-block: var(--space-8);
+}
+
+.career-timeline::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  bottom: 20px;
+  left: 24px;
+  width: 2px;
+  background-color: var(--color-border-subtle);
+}
+
+.timeline-row {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-6);
+  position: relative;
+  margin-bottom: var(--space-8);
+}
+
+.timeline-row:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-badge-node {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--color-navy-900);
+  color: var(--color-gold-400);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-serif);
+  font-size: 1.125rem;
+  font-weight: 700;
+  flex-shrink: 0;
+  border: 4px solid var(--color-surface-bone);
+  z-index: 2;
+  box-shadow: 0 0 0 2px var(--color-gold-500);
+}
+
+.timeline-content-card {
+  background-color: var(--color-surface-card);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-sm);
+  padding: var(--space-6);
+  flex: 1;
+}
+
+.timeline-stage-tag {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-gold-700);
+  margin-bottom: var(--space-1);
+}
+
+.timeline-title {
+  font-size: 1.25rem;
+  color: var(--color-navy-900);
+  margin-bottom: var(--space-2);
+}
+
+.timeline-text {
+  font-size: 0.9375rem;
+  color: var(--color-text-body);
+  line-height: 1.6;
+}
+
+/* --------------------------------------------------------------------------
+   15. HALAMAN PENDAFTARAN & DIREKTORI RESMI
+   -------------------------------------------------------------------------- */
+.reg-stepper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin-bottom: var(--space-12);
+}
+
+.reg-step-card {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  background-color: var(--color-surface-card);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.reg-step-number {
+  background-color: var(--color-navy-900);
+  color: var(--color-gold-400);
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid var(--color-border-dark);
+}
+
+.reg-step-info {
+  padding: var(--space-5) var(--space-6);
+}
+
+.reg-step-title {
+  font-size: 1.1875rem;
+  color: var(--color-navy-900);
+  margin-bottom: var(--space-2);
+}
+
+.reg-step-desc {
+  font-size: 0.9375rem;
+  color: var(--color-text-body);
+  line-height: 1.6;
+}
+
+/* Direktori Tautan Portal */
+.directory-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4);
+}
+
+.portal-link-card {
+  background-color: var(--color-surface-card);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-sm);
+  padding: var(--space-5);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.portal-link-card:hover {
+  border-color: var(--color-navy-900);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-subtle);
+}
+
+.portal-link-left {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.portal-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  background-color: var(--color-navy-50);
+  color: var(--color-navy-900);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.portal-name {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--color-navy-900);
+}
+
+.portal-url {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+.portal-ext-arrow {
+  color: var(--color-gold-600);
+  flex-shrink: 0;
+}
+
+/* --------------------------------------------------------------------------
+   16. HALAMAN TENTANG & IDENTITAS KELOMPOK
+   -------------------------------------------------------------------------- */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+  margin-block: var(--space-6);
+}
+
+.team-card {
+  background-color: var(--color-surface-card);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-sm);
+  padding: var(--space-6);
+  text-align: center;
+}
+
+.team-avatar-placeholder {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: var(--color-navy-900);
+  color: var(--color-gold-400);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-inline: auto;
+  margin-bottom: var(--space-4);
+  font-weight: 700;
+  font-size: 1.25rem;
+  border: 2px solid var(--color-gold-500);
+}
+
+.team-name {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--color-navy-900);
+  margin-bottom: 2px;
+}
+
+.team-role {
+  font-size: 0.8125rem;
+  color: var(--color-gold-700);
+  font-weight: 600;
+  margin-bottom: var(--space-2);
+}
+
+.team-detail {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+}
+
+.school-identity-box {
+  background-color: var(--color-navy-900);
+  color: #FFFFFF;
+  border-radius: var(--radius-sm);
+  padding: var(--space-8);
+  margin-block: var(--space-8);
+  border: 1px solid var(--color-border-dark);
+}
+
+.school-identity-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-6);
+  margin-top: var(--space-6);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--color-border-dark);
+}
+
+.identity-item .label {
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  color: var(--color-gold-400);
+  letter-spacing: 0.1em;
+}
+
+.identity-item .val {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-top: 2px;
+}
+
+/* Contact/Feedback Form */
+.feedback-box {
+  background-color: var(--color-surface-card);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-sm);
+  padding: var(--space-8);
+}
+
+.form-group {
+  margin-bottom: var(--space-4);
+}
+
+.form-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-navy-900);
+  margin-bottom: var(--space-1);
+}
+
+.form-input, .form-textarea {
+  width: 100%;
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-surface-bone);
+  font-size: 0.9375rem;
+  color: var(--color-text-body);
+}
+
+.form-input:focus, .form-textarea:focus {
+  outline: none;
+  border-color: var(--color-navy-900);
+  background-color: #FFFFFF;
+}
+
+/* --------------------------------------------------------------------------
+   17. FOOTER LENGKAP 3 KOLOM
+   -------------------------------------------------------------------------- */
+.site-footer {
+  background-color: var(--color-navy-950);
+  color: var(--color-text-light);
+  margin-top: auto;
+  border-top: 2px solid var(--color-gold-500);
+}
+
+.footer-top {
+  padding-block: var(--space-16) var(--space-12);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 0.8fr 1fr;
+  gap: var(--space-12);
+}
+
+.footer-col-brand .brand {
+  color: #FFFFFF;
+  margin-bottom: var(--space-4);
+}
+
+.footer-col-brand .brand-title {
+  color: #FFFFFF;
+}
+
+.footer-col-brand .brand-tagline {
+  color: var(--color-gold-400);
+}
+
+.footer-bio {
+  font-size: 0.875rem;
+  color: #A0B3CC;
+  line-height: 1.65;
+  margin-bottom: var(--space-5);
+  max-width: 420px;
+}
+
+.footer-col-title {
+  font-family: var(--font-serif);
+  font-size: 1.125rem;
+  color: #FFFFFF;
+  margin-bottom: var(--space-4);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.footer-col-title::before {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 2px;
+  background-color: var(--color-gold-500);
+}
+
+.footer-links-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.footer-link {
+  font-size: 0.875rem;
+  color: #C0CDDC;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  transition: color var(--transition-fast), transform var(--transition-fast);
+}
+
+.footer-link:hover {
+  color: var(--color-gold-400);
+  transform: translateX(3px);
+}
+
+.footer-link-icon {
+  font-size: 0.75rem;
+  color: var(--color-gold-500);
+}
+
+.footer-disclaimer-box {
+  background-color: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--color-border-dark);
+  padding: var(--space-4);
+  border-radius: var(--radius-sm);
+  font-size: 0.8125rem;
+  color: #8C9BAE;
+  line-height: 1.55;
+}
+
+.footer-bottom {
+  padding-block: var(--space-6);
+  border-top: 1px solid var(--color-border-dark);
+  font-size: 0.8125rem;
+  color: #718096;
+}
+
+.footer-bottom-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+/* Back to Top */
+.back-to-top {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 44px;
+  height: 44px;
+  background-color: var(--color-navy-900);
+  color: var(--color-gold-400);
+  border: 1px solid var(--color-border-dark);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-card);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--transition-fast), visibility var(--transition-fast), transform var(--transition-fast);
+  z-index: 80;
+}
+
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.back-to-top:hover {
+  transform: translateY(-2px);
+  background-color: var(--color-navy-800);
+  color: #FFFFFF;
+}
+
+/* --------------------------------------------------------------------------
+   18. ANIMASI & SCROLL REVEAL (RAMAH PREFERS-REDUCED-MOTION)
+   -------------------------------------------------------------------------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.reveal.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   19. RESPONSIVE MEDIA QUERIES (DESKTOP -> TABLET -> MOBILE 375PX)
+   -------------------------------------------------------------------------- */
+@media (max-width: 1080px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .hero-editorial::before {
+    display: none;
+  }
+
+  .hero-content {
+    padding-right: 0;
+  }
+
+  .schools-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .clusters-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-8);
+  }
+
+  .footer-col-disclaimer {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .top-notice-bar {
+    display: none;
+  }
+
+  .mobile-toggle {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 74px;
+    left: 0;
+    right: 0;
+    background-color: var(--color-surface-card);
+    border-bottom: 2px solid var(--color-navy-900);
+    box-shadow: var(--shadow-modal);
+    padding: var(--space-6);
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--space-4);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: all var(--transition-normal);
+  }
+
+  .nav-menu.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--space-2);
+  }
+
+  .nav-link {
+    padding: var(--space-3) var(--space-4);
+    border-radius: var(--radius-sm);
+  }
+
+  .nav-cta {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .hero-meta-bar {
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+  }
+
+  .pillars-grid,
+  .comparison-grid,
+  .requirements-grid,
+  .home-stepper,
+  .schools-grid,
+  .clusters-grid,
+  .team-grid,
+  .directory-grid,
+  .school-identity-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .reg-step-card {
+    grid-template-columns: 1fr;
+  }
+
+  .reg-step-number {
+    padding-block: var(--space-3);
+    border-right: none;
+    border-bottom: 1px solid var(--color-border-dark);
+  }
+
+  .career-timeline::before {
+    left: 18px;
+  }
+
+  .timeline-badge-node {
+    width: 38px;
+    height: 38px;
+    font-size: 0.9375rem;
+  }
+
+  .timeline-row {
+    gap: var(--space-4);
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .footer-bottom-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .modal-info-grid,
+  .career-bullets {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --space-16: 3.5rem;
+    --space-12: 2.5rem;
+  }
+
+  .container {
+    padding-inline: var(--space-4);
+  }
+
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .filter-wrapper {
+    padding: var(--space-4);
+  }
+
+  .filter-meta-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-2);
+  }
+}
